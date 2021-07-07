@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name='viewport' 
+     content='width=device-width, initial-scale=1.0, maximum-scale=1.0, 
+     user-scalable=0' >
+  <title>Cryptonite</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.svg">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/51dcff299f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="main-header">
+    <h1 class="header-title">Cryptonite</h1>
+    <h2 class="welcome-message">
+      Welcome to Cryptonite! <br>
+      Here you can compare between multiple crypto currencies.
+    </h2>
+    <div class="scroll">
+    <div class="arrow">
+      <span></span>
+      <span></span>
+      <span></span>
+</div>
+</div>
+  </header>
+
+  <section class="nav-section">
+    <div class="nav-wrapper">
+      <nav>
+        <ul>
+          <li><button class='nav-btn active' onclick="showCoins()">Home</button></li>
+          <li><button class='nav-btn' onclick="liveReportsPage()">Live Reports</button></li>
+          <li><button class='nav-btn' onclick="aboutPage()">About</button></li>
+        </ul>
+
+        <div class="search-coin-div">
+          <input class="search-input" id="searchCoin" type="text" placeholder="Search by coin symbol...">
+          <button class="search-btn" onclick="searchCoin()"><i class="fas fa-search"></i></button>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <main class="main-content container"></main>
+
+  <footer>
+    Copyright &copy; All rights reserved
+  </footer>
+
+  <!-- Modal -->
+<div id="coinSelectionModal" class="modal">
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <h2>You can only choose up to 5 coins.</h2>
+    </div>
+
+    <div class="modal-body">
+      <p>
+        Here you can change your coin selection.<br>  
+        Please choose up to 5 coins.
+      </p>
+      <div class="extraToggledCoin flex"></div>
+      <hr>
+      <div class="toggledCoins flex"></div>
+    </div>
+
+    <div class="modal-footer">
+      <div class="modalBtns">
+        <button class="btn" id="cancel">Cancel</button><button class="btn" id="save">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+<script src="main.js"></script>
+<script src="canvas.js"></script>
+</body>
+
+</html>
